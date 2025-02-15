@@ -21,7 +21,7 @@ interface GeneralSubmitButtonProps {
 export function GeneralSubmitButton({ text,variant ,width,icon}: GeneralSubmitButtonProps) {
   const { pending } = useFormStatus();
   return (
-    <Button variant={variant} className={width}>
+    <Button variant={variant} className={width} disabled={pending}>
       {pending ? (
         <>
           <Loader2 className="size-4 animate-spin" />
